@@ -1,0 +1,165 @@
+.homePanelContainer {
+  background-color: #0C111B;
+  min-height: calc(100svh - (64px + 0.7rem + 1.3rem));
+  padding-top: 0.7rem;
+  padding-bottom: 1.3rem;
+
+  @media (max-width: 580px) {
+    padding-top: 0rem;
+  }
+
+  >img:first-child {
+    width: 100%;
+
+    @media (max-width: 580px) {
+      height: 100px;
+    }
+  }
+
+  >div:nth-child(2) {
+    padding: 1.8rem 3rem 0rem 3rem;
+
+    @media (max-width: 580px) {
+      padding: 0.8rem 1rem 0rem 1rem;
+    }
+
+    >span:first-child {
+      color: #FFFFFF;
+      font-size: 1.8rem;
+      font-weight: 500;
+
+      @media (max-width: 580px) {
+        font-size: 1.3rem;
+      }
+    }
+
+    >div:nth-child(2) {
+      margin-top: 1.8em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 2rem;
+      column-gap: 1rem;
+
+      @media (max-width: 580px) {
+        margin-top: 1em;
+      }
+    }
+  }
+
+  .noResultsMess {
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    font-weight: 500;
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+}
+
+.movieCardWrapper {
+  height: calc(180px + 1rem);
+  flex: 1 1 calc(25% - 1rem); 
+  min-width: 250px;
+  cursor: pointer;
+
+  >div:first-child {
+    height: 70%;
+
+    >img:first-child {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+
+  >div:nth-child(2) {
+    height: 30%;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(360deg, #1A2B4A 0%, #2B507C 100%);
+    display: flex;
+
+    >div:first-child {
+      width: 80%;
+
+      >span:first-child {
+        color: #FFFFFF;
+        display: inline-block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      >div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        >span {
+          margin-left: 5px;
+          color: #CCCCCC;
+        }
+      }
+    }
+
+    >div:last-child {
+      width: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      padding-top: 0.5rem;
+    }
+  }
+}
+
+.playIcon {
+  background-image: url('data:image/svg+xml,<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="url(%23paint0_linear_41_122)"/><path d="M22.5 14.234C23.1667 14.6189 23.1667 15.5811 22.5 15.966L13.35 21.2488C12.6833 21.6337 11.85 21.1526 11.85 20.3828L11.85 9.81725C11.85 9.04745 12.6833 8.56632 13.35 8.95122L22.5 14.234Z" fill="white"/><defs><linearGradient id="paint0_linear_41_122" x1="16" y1="0" x2="16" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="%23FF9966"/><stop offset="1" stop-color="%23FF5E62"/></linearGradient></defs></svg>');
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.disabledPagination {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.paginationWrapper {
+  justify-content: center;
+  margin-top: 2.8rem;
+  margin-bottom: 4rem;
+
+  >li {
+    >span {
+      background: transparent !important;
+      border: none !important;
+
+      >span {
+        color: #FFFFFF;
+      }
+    }
+  }
+
+  >li[class="page-item active"] {
+    >a {
+      border: none !important;
+      background: transparent !important;
+      color: #FF6A63 !important;
+      text-decoration: underline;
+    }
+  }
+
+  >li[class="page-item"] {
+    >a {
+      border: none !important;
+      background: transparent !important;
+      color: #FFFFFF !important;
+    }
+  }
+}

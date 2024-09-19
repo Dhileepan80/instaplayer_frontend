@@ -1,0 +1,105 @@
+.loginFormContainer {
+  height: calc(100svh - 64px);
+  background-color: #0C111B;
+  display: grid;
+  place-items: center;
+
+  @media (max-width: 580px) {
+    display: initial;
+  }
+
+  >div:first-child {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    padding: 2rem;
+    width: 35%;
+
+    @media (max-width: 580px) {
+      width: calc(100% - 4rem);
+      padding: 24% 2rem 0rem 2rem;
+      border-radius: 0px;
+    }
+
+    >span:first-child {
+      font-size: 1.9rem;
+      font-weight: 500;
+      color: #263238;
+      display: block;
+
+      +span {
+        font-size: 0.9rem;
+        color: #546E7A;
+        display: block;
+      }
+    }
+
+    >form {
+      margin-top: 1.7em;
+
+      >div {
+        margin-bottom: 0.7em;
+
+        >input {
+          border-radius: 16px;
+          padding: 1rem;
+          width: calc(100% - 2rem);
+          border: 1px solid rgba(0, 0, 0, 0.2);
+
+          &:focus {
+            border: 2px solid #FF7D65;
+            outline: none;
+          }
+        }
+      }
+
+      >button {
+        background-color: #FF7D65;
+        color: #FFFFFF;
+        border-radius: 16px;
+        width: 100%;
+        padding: 1em;
+        text-align: center;
+        cursor: pointer;
+        border: none;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+      }
+
+      .disabledBtn {
+        opacity: 0.6;
+        pointer-events: none;
+      }
+
+      .errorMess {
+        color: red;
+        font-size: 0.9rem;
+        visibility: hidden;
+      }
+
+      .visibleErr {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+/* HTML: <div class="loader"></div> */
+.btnLoader {
+  width: fit-content;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #FFFFFF;
+  --_m: 
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+          mask: var(--_m);
+  -webkit-mask-composite: source-out;
+          mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {to{transform: rotate(1turn)}}

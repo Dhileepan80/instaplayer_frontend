@@ -1,0 +1,85 @@
+.headerContainer {
+  background-color: #263F61;
+  padding: 0.6rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  >img:first-child {
+    cursor: pointer;
+  }
+
+  @media (max-width: 580px) {
+    padding: 0.6rem 0.5rem;
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .rightPanelWrapper {
+    width: 35%;
+  }
+
+  >div:last-child {
+    display: flex;
+    gap: 1.7em;
+    align-items: center;
+
+    @media (max-width: 580px) {
+      margin-top: 0.7rem;
+      width: 100%;
+      gap: 0.4em;
+    }
+
+    >span {
+      color: #FFFFFF;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .searchInputWrapper {
+      border-radius: 5px;
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+
+      >div:first-child {
+        border: 1px solid rgba(255, 255, 255, 0.26);
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        padding: 0.4rem 0.5rem;
+        width: 85%;
+
+        >input {
+          border: none;
+          width: 100%;
+          background: transparent;
+          color: #FFFFFF;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      >div:last-child {
+        background: linear-gradient(180deg, #FF9966 0%, #FF5E62 100%);
+        width: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.searchIcon {
+  background-image: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 22L17.2779 17.2695L22 22ZM19.8947 10.9474C19.8947 13.3204 18.9521 15.5962 17.2741 17.2741C15.5962 18.9521 13.3204 19.8947 10.9474 19.8947C8.57438 19.8947 6.29858 18.9521 4.62062 17.2741C2.94267 15.5962 2 13.3204 2 10.9474C2 8.57438 2.94267 6.29858 4.62062 4.62062C6.29858 2.94267 8.57438 2 10.9474 2C13.3204 2 15.5962 2.94267 17.2741 4.62062C18.9521 6.29858 19.8947 8.57438 19.8947 10.9474V10.9474Z" stroke="white" stroke-width="3" stroke-linecap="round"/></svg>');
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  cursor: pointer;
+}

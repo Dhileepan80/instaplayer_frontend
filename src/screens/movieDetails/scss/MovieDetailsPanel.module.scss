@@ -1,0 +1,98 @@
+.loader {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 0.8) 100%);
+  display: grid;
+  place-items: center;
+  height: calc(100% + 1.2rem);
+}
+
+.movieDetailsPanelWrapper {
+  height: calc(100svh - (64px + 1.2rem));
+  
+  .movieWrapper {
+    height: 100%;
+    padding: 0.6rem 3rem;
+    display: flex;
+
+    >div:first-child,
+    >div:nth-child(2) {
+      width: 50%;
+    }
+
+    >div:first-child {
+      padding-top: 2.5rem;
+      color: #FFFFFF;
+      
+      >div:nth-child(2) {
+        font-size: 2.5rem;
+        font-weight: 500;
+        margin-top: 1rem;
+
+        +span {
+          margin-top: 0.7rem;
+          font-size: 1rem;
+          display: inline-block;
+          >span {
+            margin-left: 0.5rem;
+          }
+
+          +p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.1rem;
+            line-height: 2rem;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 6;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+          }
+        }
+      }
+
+      >div:nth-child(5) {
+        margin-bottom: 1rem;
+      }
+
+      >div:nth-child(5),
+      >div:last-child {
+        display: flex;
+        >span:first-child {
+          width: 30%;
+          display: inline-block;
+        }
+      }
+
+      >div:last-child >span:nth-child(2) {
+        width: 70%;
+      }
+    }
+    
+    >div:nth-child(2) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.playIcon {
+  background-image: url('data:image/svg+xml,<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="16" fill="url(%23paint0_linear_41_122)"/><path d="M22.5 14.234C23.1667 14.6189 23.1667 15.5811 22.5 15.966L13.35 21.2488C12.6833 21.6337 11.85 21.1526 11.85 20.3828L11.85 9.81725C11.85 9.04745 12.6833 8.56632 13.35 8.95122L22.5 14.234Z" fill="white"/><defs><linearGradient id="paint0_linear_41_122" x1="16" y1="0" x2="16" y2="32" gradientUnits="userSpaceOnUse"><stop stop-color="%23FF9966"/><stop offset="1" stop-color="%23FF5E62"/></linearGradient></defs></svg>');
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 103px;
+  width: 103px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.leftArrowIcon {
+  background-image: url('data:image/svg+xml,%3Csvg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cg clip-path="url(%23clip0_54_8)"%3E%3Cpath d="M6.6665 16H25.3332" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/%3E%3Cpath d="M6.6665 16L11.9998 21.3333" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/%3E%3Cpath d="M6.6665 16L11.9998 10.6667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id="clip0_54_8"%3E%3Crect width="32" height="32" fill="white"/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E');;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 32px;
+  width: 32px;
+  display: inline-block;
+  cursor: pointer;
+}
